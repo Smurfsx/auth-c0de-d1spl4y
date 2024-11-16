@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> DEKBANGTLEZ LOGINZ</title>
+    <title>LOGIN SHADOW GARDEN ANTI CHEAT</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <style>
         body {
             font-family: 'Kanit', sans-serif;
             background-color: #ffffff;
-            color: white;
+            color: rgb(0, 0, 0);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,10 +26,29 @@
         
         .container {
             text-align: center;
-            background-color: #2f3136;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        
+        .logo {
+            align-items: center;
+            width: 250px;
+            /* ปรับขนาดโลโก้ตามต้องการ */
+            margin: 0 auto;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
         }
         
         .code {
@@ -36,28 +61,31 @@
             font-size: 15px;
             /* ตั้งค่าขนาดฟอนต์ */
         }
+        
+        .footer-alert {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* ให้กว้างเต็มหน้าจอ */
+            margin: 0;
+            z-index: 1000;
+            /* ให้อยู่บนสุด */
+        }
     </style>
 </head>
 
 <body>
-
-    <div class="container">
-        <h1>Authorization Code</h1>
-        <p>Your authorization code is:</p>
-        <div class="code" id="authCode"></div>
-    </div>
-
-    <script>
-        // ฟังก์ชันเพื่อดึงค่า code จาก URL
-        function getQueryParameter(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        // ดึงค่าจาก &code= และแสดงผล
-        const authCode = getQueryParameter('code');
-        document.getElementById("authCode").innerText = authCode ? authCode : "No code found";
-    </script>
+    <center>
+        <img src="https://img2.pic.in.th/pic/logooooe3494fac12f78b7e.png" alt="Logo" class="logo">
+        <br>
+        <br>
+        <h1>ล็อคอินสำเร็จปิดหน้าต่างนี้ได้เลย</h1>
+        <div class="footer-alert" role="alert">
+            <a style="color: #000000;font-weight: bold;" href="https://www.facebook.com/dekbangtlez" target="_blank">
+                Copyright (©) <span style="color:#0066ff">Dekbangtlez ィ</span> 2024 All rights reserved.
+            </a>
+        </div>
 
 </body>
 
